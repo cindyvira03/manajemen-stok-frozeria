@@ -181,7 +181,6 @@
 @media (max-width: 600px) {
     .stats-grid { grid-template-columns: 1fr 1fr; }
     .app-content { padding: 16px; }
-    .btn-tambah span { display: none; }
 }
 </style>
 @endpush

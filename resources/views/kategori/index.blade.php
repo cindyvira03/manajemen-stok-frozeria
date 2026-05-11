@@ -29,7 +29,7 @@
 
     <x-slot name="toolbar">
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Cari kategori...">
+            <input type="text" id="searchInput" placeholder="Cari kategori..." value="{{ request('search') }}">
             <button class="btn-search" onclick="filterTable()">
                 <i class="bi bi-search"></i>
             </button>

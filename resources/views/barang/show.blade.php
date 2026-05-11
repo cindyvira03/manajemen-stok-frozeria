@@ -65,13 +65,6 @@
     font-size: 16px;
 }
 
-/* DESKRIPSI */
-.desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.6;
-}
-
 .top-actions {
     display: flex;
     gap: 6px;
@@ -217,11 +210,9 @@
     </div>
 
     <!-- DESKRIPSI -->
-    <div class="show-card">
-        <h6>Deskripsi</h6>
-        <p class="desc">
-            {{ $barang->deskripsi ?? 'Belum ada deskripsi' }}
-        </p>
+    <div class="show-card info-card">
+        <p>Deskripsi</p>
+        <h3>{{ $barang->deskripsi ?? '-' }}</h3>
     </div>
 
 </div>

@@ -31,9 +31,6 @@ body {
     font-size: 14px;
 }
 
-
-        
-
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -42,34 +39,12 @@ body {
 /* ===== NAVBAR ===== */
 
 /* ===== LAYOUT WRAPPER ===== */
-.app-sidebar {
-    width: var(--sidebar-width);
-    min-height: 100vh;
-    background: var(--sidebar-bg);
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0; left: 0; bottom: 0;
-    z-index: 100;
-    box-shadow: var(--shadow-sm);
-}
-
 .app-main {
     margin-left: 0 !important;
     flex: 1;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.app-header {
-    height: var(--header-height);
-    background: var(--card-bg);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 50;
 }
 
 .app-content {
@@ -105,6 +80,7 @@ body {
     margin-top: 3px;
 }
 
+/* ===== ALERT ===== */
 .alert {
     display: flex;
     align-items: flex-start;
@@ -131,6 +107,7 @@ body {
     color: inherit;
 }
 
+/* ===== CARD ===== */
 .card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -157,6 +134,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* ===== SEARCH BOX ===== */
 .search-box {
     position: relative;
     width: 100%;
@@ -180,7 +158,6 @@ body {
     color: var(--text-muted);
 }
 
-/* 🔥 tombol icon kanan */
 .btn-search {
     position: absolute;
     right: 6px;
@@ -190,9 +167,9 @@ body {
     height: 30px;
     border-radius: 8px;
     border: none;
-    background: transparent;            /* ❌ hilangkan bg */
-    border: 1px solid var(--primary);   /* ✅ border primary */
-    color: var(--primary);              /* icon warna primary */
+    background: transparent;            
+    border: 1px solid var(--primary);   
+    color: var(--primary);              
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,6 +203,7 @@ body {
     background: #fff;
 }
 
+/* ===== FILTER SELECT ===== */
 .filter-select {
     padding: 9px 32px 9px 12px;
     border: 1px solid var(--border);
@@ -251,7 +229,7 @@ body {
     box-shadow: 0 0 0 3px rgba(46,196,196,0.12);
 }
 
-/* Table */
+/* ===== TABLE ===== */
 .table-wrap {
     overflow-x: auto;
 }
@@ -292,7 +270,7 @@ table.data-table {
     vertical-align: middle;
 }
 
-/* INPUT */
+/* ===== FORM INPUT ===== */
 .form-grid {
     display: grid;
     gap: 16px;
@@ -303,15 +281,12 @@ table.data-table {
     margin-bottom: 15px;
 }
 
-/* GRID */
-/* 2 kolom */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
 }
 
-/* 3 kolom */
 .grid-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -338,6 +313,7 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 0 3px rgba(46,196,196,0.15);
 }
 
+/* ===== BUTTON ===== */
 .btn-tambah {
     display: inline-flex;
     align-items: center;
@@ -365,7 +341,6 @@ input:focus, select:focus, textarea:focus {
 
 .btn-tambah i { font-size: 15px; }
 
-/* Action buttons */
 .btn-action {
     display: inline-flex;
     align-items: center;
@@ -390,7 +365,6 @@ input:focus, select:focus, textarea:focus {
 .btn-hapus { background: #fee2e2; color: #ef4444; }
 .btn-hapus:hover { background: #fecaca; color: #dc2626; }
 
-/* BATAL */
 .btn-batal {
     padding: 10px 16px;
     border-radius: 10px;
@@ -417,7 +391,6 @@ input:focus, select:focus, textarea:focus {
     color: var(--primary);
 }
 
-/* BUTTON */
 .btn-primary {
     background: var(--primary);
     color: white;
@@ -432,7 +405,7 @@ input:focus, select:focus, textarea:focus {
     background: var(--primary-dark);
 }
 
-/* ACTION */
+/* ===== FORM ACTION ===== */
 .form-action {
     margin-top: 20px;
     gap: 8px;
@@ -440,28 +413,13 @@ input:focus, select:focus, textarea:focus {
     justify-content: flex-end;
 }
 
+/* ===== SPAN REQUIRED ===== */
 .required {
     color: var(--danger);
     margin-left: 2px;
 }
 
-/* tombol ganti */
-/* .btn-ganti {
-    background: var(--primary-light);
-    color: var(--primary-dark);
-    border: 1px solid rgba(46,196,196,0.4);
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.btn-ganti:hover {
-    background: var(--primary);
-    color: white;
-} */
-
+/* ===== MODAL ===== */
 .modal-icon-danger {
     width: 50px;
     height: 50px;
@@ -475,7 +433,7 @@ input:focus, select:focus, textarea:focus {
     font-size: 22px;
 }
 
-/* UPLOAD */
+/* ===== UPLOAD ===== */
 .upload-box {
     border: 2px dashed var(--border);
     border-radius: 12px;
@@ -495,6 +453,7 @@ input:focus, select:focus, textarea:focus {
     display: none;
 }
 
+/* ===== PREVIEW IMAGE ===== */
 #previewImage {
     width: 60px;
     height: 60px;
@@ -515,14 +474,13 @@ input:focus, select:focus, textarea:focus {
     font-weight: 500;
 }
 
-/* error */
 .error-text {
     color: var(--danger);
     font-size: 12px;
     margin-top: 8px;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .grid-2,
     .grid-3 {
