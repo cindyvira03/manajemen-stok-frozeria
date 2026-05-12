@@ -20,7 +20,7 @@ class BarangController extends Controller
 
         // 🧩 filter kategori
         if ($request->kategori_id === 'null') {
-            $query->whereNull('kategori_id'); // 🔥 tidak berkategori
+            $query->whereNull('kategori_id'); // tidak berkategori
         } elseif ($request->kategori_id) {
             $query->where('kategori_id', $request->kategori_id);
         }

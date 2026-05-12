@@ -247,7 +247,7 @@ input.addEventListener('change', function(e) {
     const wrapper = document.getElementById('previewWrapper');
     const content = document.getElementById('uploadContent');
     const fileName = document.getElementById('fileName');
-    const statusText = document.getElementById('statusText'); // 🔥 tambahan
+    const statusText = document.getElementById('statusText'); 
 
     if (!file) return;
 
@@ -257,7 +257,7 @@ input.addEventListener('change', function(e) {
         preview.src = e.target.result;
         fileName.textContent = file.name;
 
-        // 🔥 UBAH STATUS JADI BELUM DISIMPAN
+        // UBAH STATUS JADI BELUM DISIMPAN
         if (statusText) {
             statusText.textContent = '⚠ Perubahan belum disimpan';
             statusText.classList.remove('success-text');
@@ -271,7 +271,7 @@ input.addEventListener('change', function(e) {
     reader.readAsDataURL(file);
 });
 
-// ❌ hapus preview
+// hapus preview
 function removeImage() {
     document.getElementById('previewWrapper').style.display = 'none';
     document.getElementById('uploadContent').style.display = 'block';
@@ -279,7 +279,7 @@ function removeImage() {
 
     const statusText = document.getElementById('statusText');
 
-    // 🔥 reset status
+    // reset status
     if (statusText) {
         statusText.textContent = '';
     }

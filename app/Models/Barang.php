@@ -32,9 +32,11 @@ class Barang extends Model
     {
         return $query->where(function ($q) {
             $q->whereNotNull('stok_minimum')
+                ->where('stok', '>', 0)
                 ->whereColumn('stok', '<', 'stok_minimum');
         })->orWhere(function ($q) {
             $q->whereNull('stok_minimum')
+                ->where('stok', '>', 0)
                 ->where('stok', '<', 20);
         });
     }
@@ -52,7 +54,7 @@ class Barang extends Model
             return 'stok-habis';
         }
 
-        if ($this->stok <= $limit) {
+        if ($this->stok > 0 && $this->stok < $limit) {
             return 'stok-tipis';
         }
 
